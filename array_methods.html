@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		const str_arr = ['John', 'De Caprio', 'Brad Pit', 'Robert']
+		const num_arr = [1,24,55,21,6,9,0]
+
+		// ==== toString() =====
+
+		console.log(str_arr.toString()) // John,De Caprio,Brad Pit,Robert
+
+		// ==== join() ====
+		console.log(str_arr.join("-")) // John-De Caprio-Brad Pit-Robert
+
+
+		// ===== push & pop =====
+
+		console.log(str_arr.push("Christian Bale")) // push method returns the new length of the array - 5
+		console.log(str_arr.pop()) // pop method returns the popped element "Christian Bale"
+
+
+
+		// ====Shifting elements======
+
+		// === shift() ====  shift method removes the first element and shifts all other elements
+		console.log(num_arr.shift()) // it returns the removed element - 1
+
+		// === Unshift ==== method insert a new element at the begining of the array and shift other elements
+		console.log(num_arr.unshift("Shifted Element")) // returns the new array length - 7 
+
+
+
+		// Merging two arrays
+
+		// ====concat()====
+		console.log(str_arr.concat(num_arr)) // returns merged new array
+
+
+		// Mergin 3 arrays 
+		// === concat() ====
+
+		let a = [1,2,3,4],
+			b = [5,6,7],
+			c = [8,9,10]
+			// d = [11,12]
+
+		let new_arr = a.concat(b,c)
+
+		console.log(new_arr)
+
+
+		// ===== splice() ====== method can be used to add new element
+			let languages = ['C', 'C++', 'C#', 'Javascript', 'Java', 'PHP', 'Python']
+
+			console.log(languages.splice(2)) // returns the deleted items in a new array ['C#', 'Javascript', 'Java', 'PHP', 'Python']
+
+			// 1st param (2) is the position where new items will be added...
+
+			let framworks = ['Bootstrap','Laravel', 'Angular', 'NodeJs', 'React', 'Django', 'Flask']
+			console.log(framworks.splice(0,2,'CSS','PHP')) // ['Bootstrap','Laravel'] 
+
+			// The second parameter (0) defines how many elements should be removed. 
+			// Other parameters define the elements to added on the desired position
+
+
+		// === slice() ==== slices out a piece of an array into a new array.
+
+			let brands = ['Apple','Samsung','HP', 'Dell', 'Asus', 'Acer', 'Lenovo']
+
+			console.log(brands.slice(0,2)) // slices out a new array and returns it - ['Apple','Samsung']
+
+			// 1st argument is the starting position of slicing and 2nd is the ending position
+
+
+		// Some array references....
+
+		console.log( Array.from('Hello') )
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
