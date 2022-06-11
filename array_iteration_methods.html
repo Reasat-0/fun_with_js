@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// Online Javascript Editor for free
+		// Write, Edit and Run your Javascript code using JS Online Compiler
+		let string_array = ['Mclearen', 'Ferrari', 'Aston Martin', 'Bugatti', 'Lamborghini'];
+
+		let number_array = [23,45,566,12,44]
+
+		// === Array.forEach() === loops through all the array elements and do something
+		number_array.forEach( (value, index, array) => {
+		    console.log(value) 
+		})
+
+		// === Array.map() === loops through all the elements and return a new array based on some tasks
+		const mapped_arr = number_array.map( (value, index, array) => {
+		    return value * index
+		})
+
+		console.log(mapped_arr) // [ 0, 45, 1132, 36, 176 ]
+
+
+		// === Array.filter() === loops through all the elements and return a new array filtering the elements based on a condition
+		const filtered_arr = number_array.filter( (value, index, array) => {
+		    return value * index > 10
+		})
+
+		console.log(filtered_arr) // [ 45, 566, 12, 44 ]
+
+		// === Array.reduce() === reduce method reduce an array to a single value....
+		const simple_array = [5,7,10]
+		const reduced_value = simple_array.reduce( (total,value,index,array) => {
+		    return total + value
+		})
+
+		console.log(reduced_value) // 22
+
+		// === Array.every() ==== the every() method check if all array values pass a test.
+
+		const allOver20 = number_array.every((value,index,array)=> {
+		    return value > 20
+		})
+
+		console.log(allOver20) // false
+
+		// === Array.some() ==== the some() method check if all array values pass a test.
+
+		const someOver20 = number_array.some((value,index,array)=> {
+		    return value > 20
+		})
+
+		console.log(someOver20) // true
+
+
+		// === indexOf() ===
+		console.log(string_array.indexOf('Ferrari')) // 1
+		console.log(string_array.indexOf('rrari')) // -1
+
+		// lastIndexOf is almost the same....
+
+		// === Array.find() === find method returns the element that passes a test once.
+
+		const found_value = number_array.find((value,index,array) => {
+		    return value > 100
+		})
+		console.log(found_value) // 566
+
+
+		// === Array.findIndex() === find method returns the element that passes a test once.
+
+		const found_idx = number_array.findIndex((value,index,array) => {
+		    return value > 100
+		})
+		console.log(found_idx) // 1
+
+		// Array.From() ===== The Array.from() method returns an Array object from any object with a length property or any iterable object.
+
+		let text = 'Hello'
+
+		console.log(Array.from(text)) // [ 'H', 'e', 'l', 'l', 'o' ]
+
+		// Arrray.keys -==== Create an Array Iterator object, containing the keys of the array:
+
+		const fruits = ["Banana", "Orange", "Apple", "Mango"];
+		const keys = fruits.keys();
+		let array_keys = ""
+		for (let x of keys) {
+		  array_keys += x + "\n";
+		}
+
+
+		console.log(array_keys)
+		// Arrray.entries -==== Create an Array Iterator, and then iterate over the key/value pairs
+		const entries = fruits.entries();
+
+		let array_entries = ""
+
+		for (let x of entries) {
+		   array_entries += x;
+		}
+
+		console.log(array_entries)
+
+
+		// === Array.includes() === checks is an element exists in the array of not returns only true or false
+
+		console.log(string_array.includes("Ferrari"))
+
+
+	</script>
+</body>
+</html>
