@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		const now = new Date(); // Date() constructor....
+
+		const d = new Date(2018, 11, 24, 10, 33, 30, 0); // 
+		// Here the parameters are Y, Month, Day, hours, minutes, seconds, milliseconds
+		// months are calculated from 0 so 11 is december...
+		console.log(d)
+
+		// If we put only 1 parameter.... then that parameter will be counted as milliseconds
+		console.log(new Date(120000))
+
+
+		// ======= new Date('datestring')
+
+		// new date can creates a date object from a given date string
+
+		const d_o = new Date("October 13, 2014 11:13:00");
+		console.log(d_o)
+
+		// ===== toUTCString() ====== converts a date to a UTC standardt format
+
+		console.log(new Date().toUTCString()) // Mon, 20 Jun 2022 03:19:54 GMT
+
+		// ===== toDateString() ====== converts a date to a UTC standardt format
+
+		console.log(new Date().toDateString()) // Mon Jun 20 2022
+
+
+		// ===== toISOString() ====== converts a date to a UTC Database format
+
+		console.log(new Date().toISOString() ) // Mon Jun 20 2022
+
+		// =======parse()===== method parses a date format to miliseconds or vise versa
+
+		console.log(Date.parse("2022-06-20")) //1655683200000
+
+	</script>
+</body>
+</html>

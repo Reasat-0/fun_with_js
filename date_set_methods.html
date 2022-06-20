@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		d = new Date();
+
+
+		// ================= set methods ==============
+
+
+		// ==== setFullYear ==== sets the year of a date object
+		console.log(`Set year - ${d.setFullYear(2020)}`)
+
+		console.log('Changed ' + d)
+		//  this method can set months and days also with more parameters ... .Let...
+		console.log(d.setFullYear(2019,01,01))
+
+		console.log('Changed ' + d)
+
+		// ==== setMonth ==== sets the date of a date object
+		console.log(`Set year - ${d.setMonth(10)}`)
+		console.log('Changed', d)
+
+		// ==== setMonth ==== sets the date of a date object
+		console.log(`Set year - ${d.setDate(10)}`)
+		console.log('Changed', d)
+
+		// The setDate() method can also be used to add days to a date:
+		console.log('Changed', d.getDate() + 10)
+		console.log('Changed', d)
+
+		// Like these js has setHours, setMinutes, setSeconds methods....
+
+
+		// ===== Comparing Dates ========
+
+		let someday = new Date();
+		let today = new Date();
+
+		someday.setFullYear(2010,08,12)
+		console.log(someday)
+
+
+		if(someday > today){
+			console.log("somdeday will be the new horizon")
+		}
+		console.log("Today is the new horizon")
+
+
+
+	</script>
+</body>
+</html>
