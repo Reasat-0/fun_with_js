@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// ========== Math is a static object in javascript ====== which doesnt need any initialization
+
+		// === Math properties ====
+		console.log(Math.PI) // 3.141592653589793
+		console.log(Math.SQRT2) // 1.4142135623730951
+		console.log(Math.SQRT1_2) // 0.7071067811865476
+
+		// ============ Math methods ===========
+
+		// === Math round methods === rounds the number... 
+		console.log(Math.round(4.2)) // 4 if 4.6 then it will turn into 5
+		console.log(Math.ceil(4.2)) // 5
+		console.log(Math.floor(4.9)) // 4
+		console.log(Math.trunc (4.9)) // 4
+
+		// === Math sign methods === indicates a number is negative(-1) positive(1) or 0
+		console.log(Math.sign (-4)) // -1
+		console.log(Math.sign (0)) // 0
+		console.log(Math.sign (4)) // 1
+
+		// === Math power method ==== calculate the power 1st param is the base and 2nd is the power eg : 5^2
+		console.log(Math.pow(5,2)) // 25
+
+		//  === Math sqrt method ====
+		console.log(Math.sqrt(25)) // 5
+
+
+		//  === Math abs method ====
+		console.log(Math.abs(-25)) // 25
+
+		//  === Math sin/cos method ==== 
+		console.log(Math.sin(45)) // 0.85
+		// to make the degree value converted to radiun we need to convert it
+		console.log(Math.sin(90 * Math.PI/180)) // 1
+
+		// ==== Math min and Math max ====
+		console.log(Math.max(5,3,5,2,35,134))
+		console.log(Math.min(5,3,5,2,35,134))
+
+
+		// ==== Math.random() ====
+		console.log(Math.random())
+
+		// to make a random integer from 0-10
+
+		console.log(Math.floor(Math.random() * 10)) // HERE THE MAX VALUE 10 IS INCLUSIVE
+
+		// to make a random integar from min to max
+		function randFromMin2Max(max,min){
+			// Max exclusive
+			// return Math.floor( Math.random() * (max - min ) + min )
+
+			// Max inclusive 
+			return Math.floor( Math.random() * (max - min + 1 ) + min )
+		}
+
+		setInterval( () => {
+			console.log( randFromMin2Max(15,4) )
+		},1000)
+
+
+
+
+		// ==== Math.log() ====
+		console.log(Math.log(2))
+ 
+
+
+	</script>
+</body>
+</html>

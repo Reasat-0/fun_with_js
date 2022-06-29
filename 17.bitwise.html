@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	 // Bitwise operators mean the operators which do the bit wise operations....
+	 
+	 // Converting Bin to Decimal
+
+	 	// Using to ways we can do that...
+	 		console.log(parseInt(1000001,2).toString(10))
+	 		console.log((0b1000001).toString(10))
+
+	 	// Converting Dec to Bin
+	 		console.log( (45).toString(2) )
+	 		console.log( (45 >>> 0).toString(2) )
+
+		// << Zero fill left shift... shifts bits to left and fill with 0
+
+	 		console.log( 5 << 1 ) // 0101 << 1 ---> 101(0) ----> 1010 --->  final output --- 10
+
+		// >> Right shift...shift bits to right and the right most bit falls in
+	 		console.log( 5 >> 1 ) // 0101 >> 1 ---> 0010 ----> 2
+
+	 	// >>> Zero fill right shift... shifts bits to right and fill with 0
+	 		console.log( 2727 >>> 1 ) // 101010100111 >> 1 ---> 10101010011 ----> 2
+
+
+	</script>
+</body>
+</html>

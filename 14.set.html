@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// A JavaScript Set is a collection of unique values. Each value occurs once in a set
+
+		// ##### -------- Declaring sets -------- #####
+
+		const a = new Set([1,3,5,5])
+
+		// ==== adding element to set =====
+		a.add(6)
+		console.log(a) //...{1, 3, 5, 6}
+
+
+		// ==== deleting element from set =====
+		a.delete(3) 
+		console.log(a) //...{1,5,6}
+
+		// ==== Check an element is there in the set === 
+		console.log(a.has(6)) //...true
+
+		// ===== Iteration using ForEach ====
+		a.forEach( (value,index,s) => {
+			console.log(value, index, s)
+		})
+
+
+		// ==== values() ==== makes an iterator object like an array
+		
+		console.log(a.values())
+
+
+	</script>
+</body>
+</html>
