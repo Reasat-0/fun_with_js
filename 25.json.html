@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=	, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		// ######### ----- JSON ----- ##########
+
+		// json is a format of sending data from the server to the client...
+		// json is more like javascript object....name-value pairs..but the name must be a string...
+
+
+		let text = {
+			"cars" : [
+				{ 'name' : 'bmw', 'year' : '2010'},
+				{ 'name' : 'marcedes', 'year' : '2010'},
+				{ 'name' : 'porsche', 'year' : '2010'},
+				{ 'name' : 'ferrari', 'year' : '2010'}
+			]
+		}
+
+		console.log(text)
+
+		// Converting JSON to a javascript object...
+
+		// For simplicity, this can be demonstrated using a string as input.
+
+		// First, create a JavaScript string containing JSON syntax:
+
+		let example = '{ "cars" : ['+
+					'  { "name" : "bmw", "year" : "2010"}, ' +
+					' { "name" : "marcedes", "year" : "2010"} ]}';
+
+		// let example = '{ "employees" : [' +
+		// 				'{ "firstName":"John" , "lastName":"Doe" },' +
+		// 				'{ "firstName":"Anna" , "lastName":"Smith" },' +
+		// 				'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+		console.log(JSON.parse(example))
+
+
+	</script>
+</body>
+</html>

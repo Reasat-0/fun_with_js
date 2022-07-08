@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=	, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<button class="button">Click me to check this on me </button>
+
+	<script>
+		// ========== Arrow Function =========== is the shorter way to write funcitons....
+
+		const hello = () => {
+			return 'Hello'
+		}
+
+		// It gets shorter if the function has only one statement...
+
+		const one_statement = () => console.log( "hello from O.S" );
+		one_statement()
+
+
+		// ======== This keyword in arrow functions =========
+
+		console.log('======= The this keyword for normal function ========')
+		function normal(){
+			console.log(` Called from and the this object is ${this}`)
+		}
+
+		normal('the root of the script')
+		document.querySelector('.button').addEventListener('click',normal)
+
+        
+        // ----this object in normal functions----
+        console.log('======= The this keyword for arrow function ========')
+        const arrow = () => console.log(`Arrow --- Called from and the this object is ${this}`)
+
+		arrow('the root of the script')
+		document.querySelector('.button').addEventListener('click',arrow) // the window object
+
+
+
+
+	</script>
+</body>
+</html>

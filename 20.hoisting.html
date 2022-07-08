@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=	">
+	<title>	</title>
+</head>
+<body>
+	<script>
+		
+			x = 5;
+		var x;
+		console.log(x)
+
+		// ------ hoisting with let and const -----
+
+		// Variables defined with let and const are hoisted to the top of the block, but not initialized.
+		 	// that means the block of code has concern about the variable but cant let you use untill it is declared		
+
+			try{
+						y = 6;
+				let y;
+
+				console.log(y)
+			} catch(err){
+				console.log(err.name)
+			}
+
+		// for let it will be a reference error and for const it will be a syntax error...
+
+
+		// Hoisted is only applicable for declaration not for initialization...
+
+
+		var a = 5
+
+
+		console.log('B is', b) // as b is initialized later...it will not be hoisted and will be undefined
+
+		var b = 12
+		
+
+
+	</script>	
+</body>
+</html>

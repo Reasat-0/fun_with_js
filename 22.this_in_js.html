@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+
+		// ============= This keyword ================ refers to a object based on from where it is called...
+		const person = {
+			name : 'Babla',
+			say_name: function(){
+				console.log(this)
+			}
+
+		}
+		person.say_name();
+
+
+		// Alone, this refers to the global object.
+		// In a function, this refers to the global object.
+		// In a function, in strict mode, this is undefined.
+		// In an event, this refers to the element that received the event.
+		// Methods like call(), apply(), and bind() can refer this to any object.
+	</script>
+</body>
+</html>
