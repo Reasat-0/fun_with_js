@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+		
+		function Person(fname,lname){
+			this.firstName = fname,
+			this.lastName = lname
+			// 
+			// this.fullName = function(){
+			// 	return this.firstName + " " + this.lastName
+			// }
+		}
+
+		const reasat = new Person("Reasat","Muntasir")
+		const munir = new Person("Munirul","Alam")
+		const irfan = new Person("Irfan","Uddin")
+
+		// Now if we want to add a property or method to the constructor, we cant do that by using person.fullName
+
+		// we can use prototype here
+
+		Person.prototype.fullName = function(){
+			return this.firstName + " " + this.lastName
+		}
+
+		console.log( reasat.fullName() );
+
+		console.dir(Person)
+
+		//  We can Add anything into the built in prototype...
+
+		let x = 'Hello'
+
+		// Here x is the Default String Object...
+
+		String.prototype.makeFun = function () {
+			return "Hello I am doing Fun"
+		}
+		console.log( x.makeFun() ) ;
+
+		console.dir(String.prototype)
+
+	</script>
+</body>
+</html>

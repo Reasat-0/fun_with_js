@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+	<script type="text/javascript">
+		
+
+		//  ======================= ######### ######### ######### ========================
+		//  ======================= 		ACCESSOR 		      ========================
+		//  ======================= ######### ######### ######### ========================
+
+
+		// ES5 2009 introduced JS getter and setter method to set the js properties....
+
+		// ========= GETTER ======
+
+		const person = {
+			name: "Kabul",
+			language : "Afghan",
+
+			// get lang () {
+			// 	return `${this.name} talks in ${this.language}`
+			// },
+
+			set lang (lang) {
+				this.language = lang
+			}
+		}
+		person.lang = "english"
+
+		console.log(person.lang)
+		console.log(person)
+
+
+
+	</script>
+</body>
+</html>
