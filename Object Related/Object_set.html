@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+	<script type="text/javascript">
+		
+
+		// A JavaScript Set is a collection of unique values.
+
+		// Each value can only occur once in a Set.
+
+		// A Set can hold any value of any data type.
+
+		const new_set = new Set(['a','b','c'])
+
+
+		console.log(new_set)
+		const arr = [1,2,3,4,5,11,22,33,11]
+
+		const another_set = new Set(arr)
+
+		console.log(another_set) // {1,2,3,4,5,11,22,33,11}
+
+		new_set.add(100)
+
+		console.log(new_set) // {'a', 'b', 'c', 100}
+
+		new_set.forEach(function(val){
+			console.log(val) // a \n b \n c \n 100
+		})
+
+
+		console.log(new_set.values()) // {'a', 'b', 'c', 100}
+		console.log(new_set.keys())  // same as values
+
+
+		console.log(new_set.entries()) // returns value=>value pairs as set has no keys
+
+
+		console.log(typeof new_set) // Object
+
+		console.log( new_set instanceof Set ); // true
+
+	</script>
+</body>
+</html>
