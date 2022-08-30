@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+		// Function param and arg...
+
+		// lets look at a function ----
+		function multiply(a,b){ // here a and b are the parameters
+			return a * b;
+		}
+
+
+		console.log(multiply(43,2)) // here 43 and 2 is the arguments
+
+		// So.... the things we pass are arg and the things we receive in funciton defination is called param
+
+		// Arguments object....
+
+		// javascript functions by default gets a property named argument...
+		function add(a,b){ // here a and b are the parameters
+			
+			console.log(arguments)
+			return arguments.length;
+		}
+
+		console.log(add( '3',4 , 5) )
+
+	</script>
+</body>
+</html>

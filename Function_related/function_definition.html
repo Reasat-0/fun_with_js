@@ -1,0 +1,71 @@
+
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		
+
+		<script type="text/javascript">
+			
+
+
+			// =============== Hoisting In function =========
+			// Normally functions are hoisted on top in js... But when we write it as an expression using a variable it doesn't get hoisted...
+			// like===> let a = function(){ } this wont be hoisted on top.....
+			// console.log(a)
+			console.log(test)
+
+			const a = function () {
+
+			}
+
+			function test () {
+
+			}
+
+			// =============== Self Invoking function.... ======== IIFE
+			function selfInvoke () {
+				console.log("I am a self invoking function")
+			}
+			
+
+			(function(){
+				console.log("I am a self invoking funciton modddd")
+			})();
+
+			// ============== Arrow Functions =================
+
+			const myFunc = () => "Hello"
+
+			(function(){
+				console.log("I am a self invoking fdsfdsfdsfsd mod")
+			})();
+
+
+
+			// this in arrow function
+
+			const test_obj = {
+				a : 65,
+				b : function(){
+					console.log(this) // this will indicate to the a object
+				},
+				c: ()=> {
+					console.log(this)
+				}
+			}
+
+			test_obj.b()
+			test_obj.c()
+
+
+		</script>
+
+	</body>
+	</html>
+
