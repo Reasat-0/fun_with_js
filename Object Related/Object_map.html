@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+	<script type="text/javascript">
+		
+		// A Map holds key-value pairs where the keys can be any datatype.
+
+		// A Map remembers the original insertion order of the keys.
+
+		// A Map has a property that represents the size of the map.
+
+
+		const new_map = new Map([
+			['apple', 20],
+			['mango', 22],
+			['pineapple', 28]
+		])
+
+		console.log(new_map)
+
+		// can add element by the set() method...
+		new_map.set('jackfruit', 30)
+
+		// set() method can change the existing values also...
+		new_map.set('apple',12)
+
+
+		// get() method gets the value of a key from a map
+		console.log(new_map.get('apple'))
+
+		console.log(new_map.size)
+
+		new_map.delete('apple')
+
+		new_map.has("apple");
+
+		new_map.forEach (function(value, key) {
+		  console.log(`${value}====>${key}`)
+		})
+
+		console.log(new_map instanceof Map) // true
+
+		console.log( new_map.entries() ) // returns an iterator object
+
+		console.log(new_map.keys())
+		console.log(new_map.values())
+
+
+		// We can use object as keys in Map.... .thats the important feature here...
+
+		// Create Objects
+		const apples = {name: 'Apples'};
+		const bananas = {name: 'Bananas'};
+		const oranges = {name: 'Oranges'};
+
+		// Create a Map
+		const fruits = new Map();
+
+		// Add new Elements to the Map
+		fruits.set(apples, 500);
+		fruits.set(bananas, 300);
+		fruits.set(oranges, 200);
+
+		console.log(fruits.apples)
+
+	</script>
+</body>
+</html>

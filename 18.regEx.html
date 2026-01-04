@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+		// Regular expression can be used using search() and replace() method in js....
+
+			let text = 'This is a dummy text to explore.'
+
+			// search() method - returns the first index of matched pattern...
+				console.log('Hello Bubu'.search('ubu')) // 7
+
+			// replace() - replaces the matched pattern with the 2nd parameter..
+				console.log('Hello Bubu'.replace('ubu','bub')) // hello bbub
+
+
+			// using regex in search....
+				console.log(text.search(/is/i)) // 2
+
+			// regular expression is written without quotation .... it has 2 part... 
+			// 1st one is the pattern and 2nd one is modifiers(i,g,m) 
+
+
+			// modifier i ---> means the search is case insensitive...
+			// modifier g ---> means the search is global...
+			// modifier m ---> means the search is multiline performing...
+
+				console.log(text.search( /is/g ) ) 
+
+
+				console.log(text.search( /is/m ) ) 
+
+			// Regular expression patters -----
+
+				// [abc] matches anything inside the []
+				console.log(text.search(/[abc]/g)) // will look for a or b or c and return the index
+
+				// [0-9] marches anything from 0 to 9
+
+				// [x|y] --- looks for any of these 2
+				console.log(text.search(/x|y/i)) // 14
+
+				// \d finds any digit...
+				// \s finds any whitespace...
+				// \b finds a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b
+
+
+				// \uxxxx	Find the Unicode character specified by the hexadecimal number xxxx
+
+
+				// n+ means atleast one n 
+				// n* no n or more n
+				// n? zero or 1 n
+
+
+
+
+			// ####### True Regex method ########
+
+			// test() --- It searches a string for a pattern, and returns true or false, depending on the result.
+
+			const pattern = /e/;
+			console.log(pattern.test("The best things in life are free!") ); // true
+
+			// exec() It searches a string for a specified pattern, and returns the found text as an object. If no match is found, it returns an empty (null) object.
+
+			console.log(/e/.exec("The best things in life are free!");)
+
+
+	</script>
+</body>
+</html>

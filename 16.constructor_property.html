@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script>
+		console.log("John".constructor) //...f String() { [native code] }
+		console.log([1,2,3].constructor) //...ƒ Array() { [native code] }
+		console.log({'name': 'Hola', 'age' : 12}.constructor) //...ƒ Object() { [native code] }
+		console.log(3.14.constructor) //...ƒ Number() { [native code] }
+		console.log(false.constructor) //...ƒ Boolean() { [native code] }
+		console.log(new Date().constructor) //...ƒ Date() { [native code] }
+		console.log(function () {}.constructor) //...ƒ Function() { [native code] }
+
+
+
+		//  ######## Check an object is an array or not #########
+		const myArray = [1,2,3,4]
+		function checkIsArray(x){
+			return x.constructor.toString().indexOf('Array') // 9 ...if returns -1 then its not an array
+		}
+
+		console.log(checkIsArray(myArray))
+
+		//  ######## another way to Check an object is an array or not #########
+		function checkIsArray2(x){
+			return x.constructor === Array // here Array is the constructor of the Array object
+		}
+
+		console.log(checkIsArray2(myArray))
+
+
+	</script>
+	
+</body>
+</html>

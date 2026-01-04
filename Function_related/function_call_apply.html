@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+
+
+		// Call is used to redefine the this object or any object in a function or anywhere...
+
+		const person = {
+			firstName : "Bahar",
+			lastName : "Doe",
+		 	fullName: function(x,y) {
+		    	return this.firstName + " " + this.lastName;
+		  	}
+		}
+
+		const person1 = {
+			firstName:"John",
+			lastName: "Doe"
+		}
+
+
+		const person2 = {
+		  	firstName:"Mary",
+		  	lastName: "Doe"
+		}
+
+		console.log( person.fullName.call(person1) ); // the fullName function's this will refer to person1 rather than person...
+
+		// if the function expects more parameters then we can send them using call and passing more param after the object..
+
+		console.log( person.fullName.call(person1 , 5, 6) );
+
+
+		// ====================################### APPPLY ########################===============================
+
+		// call and apply are same except for the extra parameters... apply passes parameters as array rather than passing separately...
+
+		console.log( person.fullName.apply(person1 , [5, 6]) );
+
+		// using apply method we can find out the max number from an array...
+
+		let a = [1,2,34,4,32,21,32,45]
+
+		console.log(Math.max.apply(null, a))
+
+	</script>
+</body>
+</html>

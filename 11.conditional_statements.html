@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		let x = 12, y = 44, z= 43
+
+		if( y > z ){
+			console.log("Y Is bigger than Z")
+		}
+		else if( y > x){
+			console.log(" y is the biggest number")
+
+		}
+		else{
+			console.log(" X or Z can be the biggest")
+		}
+
+
+		// ===== Switch =======
+
+		// console.log(new Date().getDay())
+
+		switch( new Date().getDay() ){
+			case 0:
+				console.log('Sunday');
+				break;
+			case 1:
+				console.log('Monday');
+				break;
+			case 2:
+				console.log('Tuesday');
+				break;
+			case 3:
+				console.log('Wednesday');
+				break;
+			case 4:
+				console.log('Thursday');
+				break;
+			case 5:
+				console.log('Friday');
+				break;
+			case 6:
+				console.log('Saturday');
+				break;
+			default: 
+				console.log("Default keyword executes... while there is no match...")
+		}
+
+		// sometimes we may want to use switch for 2 same cases... How can we write that!!!!!!
+
+		switch( new Date().getDay() ){
+			case 0:
+			case 1:
+				console.log('Monday');
+				break;
+			case 2:
+				console.log('Tuesday');
+				break;
+			case 3:
+				console.log('Wednesday');
+				break;
+			case 4:
+				console.log('Thursday');
+				break;
+			case 5:
+				console.log('Friday');
+				break;
+			case 6:
+				console.log('Saturday');
+				break;
+			default: 
+				console.log("Default keyword executes... while there is no match...")
+		}
+
+	</script>
+</body>
+</html>

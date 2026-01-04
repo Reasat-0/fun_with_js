@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// ########## ------- MAP ----------##########
+
+		// key value pair...where keys can be any data type
+
+		const new_map = new Map([
+			['name','Salman'],
+			['type', 'actor'],
+			['age',58]
+		])
+
+		console.log(new_map)
+
+		// ===== to add new key value pairs set() is used.... or alter previous key
+
+		new_map.set('status','single')
+
+		new_map.set('name','Sallu')
+
+		console.log(new_map)
+
+
+		// ====== to get a value from key ======
+		console.log(new_map.get('name'))
+
+		// ======counting the size=====
+
+		console.log(new_map.size)
+	</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>	</title>
+</head>
+<body>
+
+<script>
+		
+		let ls = "A quick brown fox jumped over the lazy dog"
+		let ss = "Hello World"
+
+		// Writing quotes or other special characters in js
+
+				// #1 - With Excape characters
+				let with_quote = "Didar said, \"I asked karim's father about the boy\" ; "
+				console.log(with_quote)
+
+				// #2 - Using mirror quote
+				let mirror_single = 'She said,"Alice is a nice girl" ';
+				let mirror_double = "She said, 'Alice is a nice girl' ";
+
+				console.log(mirror_single)
+				console.log(mirror_double)
+
+
+
+
+		// ======Properties of string=======
+
+			// 1. length property
+
+					console.log(ls.length)
+					console.log(ss.length)
+
+
+
+		// ======Methods of string========
+			// -----Extracting Parts of a string-----
+
+				// ----Slice---- 
+				console.log(ss.slice(6,8)) // "World"
+				console.log(ss.slice(-6,-3)) // " Wo"
+
+				// ----Substring---
+					// its also like slice just it considers negative values as 0
+				console.log(ss.substring(-6,4)) // this will be considered from 0 to 4 output will be "Hell"
+
+				// ----Substr----
+				console.log(ss.substr(0,5)) // 2nd parameter is length to extract here... output "Hello"
+				console.log(ss.substr(-5,5)) // Output: "World"
+
+			// ----Replacing Value---
+
+				// Replace
+				console.log( ss.replace("World","Javascript")) // output "Hello Javascript"
+
+			// Converting 
+
+				// ---toLowerCase
+				ss.toLowerCase();
+				ss.toUpperCase();
+
+
+			// Trimming 
+
+				let to_trim = "        Hola trim      "
+
+				to_trim.trim(); // Output "Hola trim"
+
+			// Char at 
+
+				ss.charAt(0) // "H"
+				ss.charCodeAt(0)
+
+			// Get the string as array element
+				let test = "Ferrari,Lamborghini,Fiat,Porsche"
+
+				console.log( test.split(",") )
+
+</script>
+
+</body>
+</html>

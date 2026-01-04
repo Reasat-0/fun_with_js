@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let name = "Javascript Programming Language and it's going to be the best language of time"
+
+		// ==== Index of =====
+		console.log(name.indexOf('a')) // 0
+
+		// ===== Last Index of =====
+		console.log(name.lastIndexOf('a')) // 28
+
+		// These 2 methods receive 2nd parameters as the starting search position...
+		console.log(name.indexOf('a',2)) // it will start searching for an "a" from the 2th index;
+
+		// ====== Search ======
+		console.log(name.search('language')) // 62
+
+
+		// ====== Match =======
+			// This method search for a regex or a pattern from the string
+		console.log(name.match(/an/g)) // ['an', 'an', 'an']
+
+
+		// ===== includes ====
+			// This method receive 2nd parameters as the starting search position...
+		console.log(name.includes("language")) // true
+
+
+		// ==== startsWith() =====
+
+		console.log( name.startsWith("J")) ;
+
+
+
+	</script>
+</body>
+</html>

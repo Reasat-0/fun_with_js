@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		const person = {
+			name: "Kabir",
+			age : 12
+		}
+
+		const age = [ 45,67,53,65,43]
+
+		// ==== For =====
+
+		for(var i=0; i < age.length; i++){
+			console.log(i)
+		}
+
+
+		// ======= For in =======
+		for(x in person){
+			console.log(`${x} - ${person[x]}`) // name - kabir \n age - 12
+		}
+
+		for(ages in age){
+			console.log(ages) // 0,1,2,3,4,5
+		}
+
+
+		// ====== For of ======= loops over any iterable objects..like array,string etc...
+
+
+
+		for( i of age){
+			console.log(i)  // 45,67,53,65,43
+		}
+
+
+		// #########=== BREAK ===########
+
+		for(var j = 0; j < 10; j++){
+			if(j === 3 ){
+				continue;
+			}
+			else if(j === 9){
+				break;
+			}
+			console.log(j)
+		}
+
+	</script>
+</body>
+</html>

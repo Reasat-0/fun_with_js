@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// =======####### Class in Javascript ####### ==========
+
+		// Classes are blueprint and they are not objects..classes always added a method called constructor()
+
+
+		class Car {
+			constructor(brand, model ){
+				this.brand = brand;
+				this.model = model;
+				// this.year = year
+				// console.log(this.brand + " " + this.model) // it will be called whenever an object is created...
+			}
+
+			calculate_years(year){
+				const date = new Date();
+				// console.log( date.getFullYear() - this.year )
+				console.log(`${this.brand} ${this.model} has been released ${date.getFullYear() - year} years ago..`) 
+			}
+		}
+
+		const bmw = new Car('bmw','V7')
+
+		// console.log(bmw)
+		bmw.calculate_years(2011);
+
+		//If you do not define a constructor method, JavaScript will add an empty constructor method.
+
+	</script>
+</body>
+</html>

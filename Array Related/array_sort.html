@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+	</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		let string_array = ['Mclearen', 'Ferrari', 'Aston Martin', 'Bugatti', 'Lamborghini'];
+
+		let number_array = [23,45,566,12,44]
+
+		let object_array = [
+			  {type:"Volvo", year:2016},
+			  {type:"Saab", year:2001},
+			  {type:"BMW", year:2010}
+			];
+
+		// ========sort()======== sorts an array alphabetically...
+
+		console.log(string_array.sort()); // ["Aston Martin", "Bugatti" ....]
+
+		// ====== reverse() ============ reverses an array 
+		console.log(number_array.reverse()) // [44,12,566,45,23]
+
+		// ====== sort() ============ to sort a number array 
+		console.log(number_array.sort( (a,b) => a-b))  // [12, 23, 44, 45, 566]
+		console.log(number_array.sort( (a,b) => b-a))  // [566, 45, 44, 23, 12]
+
+		// ===== Finding the highest array value ==========
+			// 1st sort the array in descending order 
+			var new_sorted_array = number_array.sort( (a,b) => b - a  )
+
+			// 2nd get the first element
+			console.log(new_sorted_array[0])
+
+		// Find the highest using math.MAX
+		console.log( Math.max.apply(null, new_sorted_array) )
+
+
+		// Sorting array of objects based on one property
+		var new_object_array = object_array.sort( (a,b) => {
+			return a.type - b.type
+		})
+
+		console.log(new_object_array)
+
+	</script>
+</body>
+</html>

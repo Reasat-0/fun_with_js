@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+
+		const arr = [1,2,3,4]
+
+		console.dir(arr[Symbol.iterator])
+
+		const iteratorObj = arr[Symbol.iterator]();
+
+		console.log(iteratorObj)
+
+		console.log(iteratorObj.next())
+		console.log(iteratorObj.next())
+		console.log(iteratorObj.next())
+
+
+		//  SO we have seen that any object can be iterable if it can have the Symbol.iterator object....
+
+		//  Lets create an iterator for an object and lets make the object iterable...
+
+		const testObj = {
+			'one' : '1111',
+			'two' : '2222',
+			'three' : '3333',
+		}
+
+
+		testObj[Symbol.iterator] = function(){
+			let n = 0,
+				done = false
+			return {
+				next : function(){
+						n++;
+						if( n == 3){
+							done = true
+						}
+					return {
+						value : Object.values(testObj)[n],
+						done : done
+					}
+				}
+			}
+		}
+
+		for(let n of testObj){
+			console.log(n)
+		}
+
+	</script>
+</body>
+</html>
